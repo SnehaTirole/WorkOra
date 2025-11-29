@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";//
-
+import { Link } from "react-router-dom";
 export default function Login() {
   const { login, loading } = useAuth();
   
@@ -35,9 +35,7 @@ export default function Login() {
 
         <p className="text-gray-600 mb-6 text-center">
           Don’t have an account?{" "}
-          <a href="/signup" className="text-green-600 font-medium hover:underline">
-            Sign up
-          </a>
+          <Link to="/signup"  className="text-green-600 font-medium hover:underline">Sign Up</Link>
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-6">
